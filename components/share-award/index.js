@@ -87,7 +87,7 @@ Component({
     detailStr: {
       invite: '学海无涯苦作舟',
       nickInvite: '蹦萨卡拉卡',
-      bpbMini: '启明星活动_乐体验',
+      bpbMini: '启明星研学_乐体验',
       clickToMini: '(长按识别二维码)',
       awardContent: '我在北方的寒夜里四季如春'
     },
