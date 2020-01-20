@@ -12,9 +12,9 @@ Page({
         { imgUrl: "https://www.gfcamps.cn/morningstar/zmzt.png", text: "周末主题", route: "../indexdetail/indexdetail?id=17" },
         { imgUrl: "https://www.gfcamps.cn/morningstar/gg.png", text: "公告中心", route: "../indexdetail/indexdetail?id=18" },
         { imgUrl: "https://www.gfcamps.cn/morningstar/ly.png", text: "夏/冬令营", route: "../indexdetail/indexdetail?id=19" },
-        { imgUrl: "https://www.gfcamps.cn/morningstar/qzjy.png", text: "亲子教育", route: "../indexdetail/indexdetail?id=20" },
+        { imgUrl: "https://www.gfcamps.cn/morningstar/qzjy.png", text: "亲子陪伴", route: "../indexdetail/indexdetail?id=20" },
         { imgUrl: "https://www.gfcamps.cn/morningstar/gy.png", text: "公益", route: "../indexdetail/indexdetail?id=21" },
-        { imgUrl: "https://www.gfcamps.cn/morningstar/jtjy.png", text: "家庭教育", route: "../indexdetail/indexdetail?id=22" },
+        { imgUrl: "https://www.gfcamps.cn/morningstar/jtjy.png", text: "My home", route: "../indexdetail/indexdetail?id=22" },
       ]
     },
     navScrollLeft: 0,
