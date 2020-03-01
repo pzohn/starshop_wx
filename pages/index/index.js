@@ -17,6 +17,8 @@ Page({
         { imgUrl: "https://www.gfcamps.cn/morningstar/jtjy.png", text: "My home", route: "../indexdetail/indexdetail?id=22" },
       ]
     },
+
+    proLst: [],
     navScrollLeft: 0,
     name: '',
     imgUrls: [],
@@ -101,12 +103,14 @@ Page({
         for (var i in res.data.good) {
           var object = new Object();
           object.url = 'https://www.hattonstar.com/storage/' + res.data.good[i].title_pic;
-          object.title = res.data.good[i].name;
-          if (object.title.length > 8) {
-            object.title = object.title.substring(0, 7)
-            object.title += "..."
-          }
+          object.text = res.data.good[i].name;
+          object.link = '../detail/detail?id=' + res.data.good[i].id;
+          // if (object.title.length > 8) {
+          //   object.title = object.title.substring(0, 7)
+          //   object.title += "..."
+          // }
           object.price = res.data.good[i].price + '元';
+          object.title = object.price;
           object.id = res.data.good[i].id;
           recommend[i] = object;
         }
@@ -114,19 +118,21 @@ Page({
         for (var i in res.data.week) {
           var object = new Object();
           object.url = 'https://www.hattonstar.com/storage/' + res.data.week[i].title_pic;
-          object.title = res.data.week[i].name;
-          if (object.title.length > 8) {
-            object.title = object.title.substring(0, 7)
-            object.title += "..."
-          }
+          object.text = res.data.week[i].name;
+          object.link = '../detail/detail?id=' + res.data.week[i].id;
+          // if (object.title.length > 8) {
+          //   object.title = object.title.substring(0, 7)
+          //   object.title += "..."
+          // }
           object.price = res.data.week[i].price + '元';
+          object.title = object.price;
           object.id = res.data.week[i].id;
           hotrec[i] = object;
         }
         page.setData({
           imgUrls: imgUrls,
-          recommend: recommend,
-          hotrec: hotrec
+          // proLst: recommend,
+          proLst: hotrec
         });
       },
       fail: function (res) {
