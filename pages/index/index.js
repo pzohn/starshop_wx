@@ -7,14 +7,14 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     DFrames: {
       layOut: [
-        { imgUrl: "https://www.gfcamps.cn/morningstar/yxlx.png", text: "研学旅行", route: "../indexdetail/indexdetail?id=15" },
-        { imgUrl: "https://www.gfcamps.cn/morningstar/shsj.png", text: "社会实践", route: "../indexdetail/indexdetail?id=16" },
-        { imgUrl: "https://www.gfcamps.cn/morningstar/zmzt.png", text: "周末主题", route: "../indexdetail/indexdetail?id=17" },
-        { imgUrl: "https://www.gfcamps.cn/morningstar/gg.png", text: "公告中心", route: "../indexdetail/indexdetail?id=18" },
-        { imgUrl: "https://www.gfcamps.cn/morningstar/ly.png", text: "夏/冬令营", route: "../indexdetail/indexdetail?id=19" },
-        { imgUrl: "https://www.gfcamps.cn/morningstar/qzjy.png", text: "亲子陪伴", route: "../indexdetail/indexdetail?id=20" },
-        { imgUrl: "https://www.gfcamps.cn/morningstar/gy.png", text: "公益", route: "../indexdetail/indexdetail?id=21" },
-        { imgUrl: "https://www.gfcamps.cn/morningstar/jtjy.png", text: "My home", route: "../indexdetail/indexdetail?id=22" },
+        { imgUrl: "https://www.gfcamps.cn/morningstar/01.jpg", text: "研学旅行", route: "../indexdetail/indexdetail?id=15" },
+        { imgUrl: "https://www.gfcamps.cn/morningstar/02.jpg", text: "社会实践", route: "../indexdetail/indexdetail?id=16" },
+        { imgUrl: "https://www.gfcamps.cn/morningstar/03.jpg", text: "周末主题", route: "../indexdetail/indexdetail?id=17" },
+        { imgUrl: "https://www.gfcamps.cn/morningstar/04.jpg", text: "公告中心", route: "../indexdetail/indexdetail?id=18" },
+        { imgUrl: "https://www.gfcamps.cn/morningstar/05.jpg", text: "夏/冬令营", route: "../indexdetail/indexdetail?id=19" },
+        { imgUrl: "https://www.gfcamps.cn/morningstar/06.jpg", text: "亲子陪伴", route: "../indexdetail/indexdetail?id=20" },
+        { imgUrl: "https://www.gfcamps.cn/morningstar/07.jpg", text: "公益", route: "../indexdetail/indexdetail?id=21" },
+        { imgUrl: "https://www.gfcamps.cn/morningstar/08.jpg", text: "家庭教育", route: "../indexdetail/indexdetail?id=22" },
       ]
     },
 
