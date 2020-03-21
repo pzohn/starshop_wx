@@ -40,7 +40,7 @@
 <view class = "{{currentTab == 0 ? 'show':'hidden'}}" style='margin-bottom:50px;'>
   <scroll-view>
     <block wx:for="{{classInfo}}" wx:key="classInfo" >
-      <image class="img" src="{{item}}" mode="widthFix"></image>
+      <image class="img" src="{{item}}" bindtap="preview" data-src="{{item}}" mode="widthFix"></image>
     </block>
   </scroll-view>
 </view>
