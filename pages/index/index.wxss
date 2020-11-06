@@ -194,7 +194,7 @@ color: #222;
 
 .bztj{
   width: 100%;
-  background:url('https://www.gfcamps.cn/morningstar/byzt1.png') no-repeat center center;
+  background:url('https://www.hattonstar.com/morningstar/byzt1.png') no-repeat center center;
   background-size: cover;
   height: 70px;
   border-radius: 25rpx;
@@ -208,7 +208,7 @@ color: #222;
 
 .rxhw{
   width: 60%;
-  background:url('https://www.gfcamps.cn/morningstar/dstj.png') no-repeat center center;
+  background:url('https://www.hattonstar.com/morningstar/dstj.png') no-repeat center center;
   background-size: cover;
   height: 50px;
   border-radius: 25rpx;
