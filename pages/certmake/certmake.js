@@ -26,7 +26,8 @@ Page({
     order_message: '', //订单留言
     cart_ids: [], // 购物车商品id
     type:'',
-    fixed_address_flag:false
+    fixed_address_flag:false,
+    userInfo_flag:false
   },
   //选择地址
   bindaddress: function () {
@@ -574,6 +575,7 @@ Page({
   },
 
   doDeal:function() {
+    var page = this;
     if (this.data.hasAddr == 0) {
       wx.showModal({
         title: '错误提示',
@@ -586,10 +588,27 @@ Page({
       })
       return
     }
-    if (this.data.type == 'trade') {
-      this.doTrade()
-    } else if (this.data.type == 'cert') {
-      this.doCert();
+    if (page.data.userInfo_flag == true){
+      if (page.data.type == 'trade') {
+        page.doTrade()
+      } else if (page.data.type == 'cert') {
+        page.doCert();
+      }
+      page.setData({userInfo_flag:false})
+    }else{
+      wx.showModal({
+        content: '确认报名信息',
+        success: function (res) {
+          if (res.confirm) {
+            page.setData({userInfo_flag:true})
+            wx.navigateTo({
+              url: '../userinfo/userinfo'
+            });
+          } else if (res.cancel) {
+            page.setData({userInfo_flag:false})
+          }
+        }
+      })
     }
   },
 

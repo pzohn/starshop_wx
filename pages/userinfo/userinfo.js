@@ -7,12 +7,66 @@ Page({
   data: {
     sex: '',
     phone: '',
+    area: '',
     name: '',
     email: '',
-    age: ''
+    school: '',
+    class: '',
+    grade: '',
+    card: '',
+    age: '',
+    nation: ''
   },
 
   formSubmit: function (e) {
+    if (e.detail.value.school == '') {
+      wx.showModal({
+        title: '错误提示',
+        content: '学校不能为空',
+        showCancel: false,
+        success: function (res) {
+          if (res.confirm) {
+          }
+        }
+      })
+      return;
+    }
+    if (e.detail.value.area == '') {
+      wx.showModal({
+        title: '错误提示',
+        content: '校区不能为空',
+        showCancel: false,
+        success: function (res) {
+          if (res.confirm) {
+          }
+        }
+      })
+      return;
+    }
+    if (e.detail.value.grade == '') {
+      wx.showModal({
+        title: '错误提示',
+        content: '年级不能为空',
+        showCancel: false,
+        success: function (res) {
+          if (res.confirm) {
+          }
+        }
+      })
+      return;
+    }
+    if (e.detail.value.class == '') {
+      wx.showModal({
+        title: '错误提示',
+        content: '班级不能为空',
+        showCancel: false,
+        success: function (res) {
+          if (res.confirm) {
+          }
+        }
+      })
+      return;
+    }
     if (e.detail.value.name == ''){
       wx.showModal({
         title: '错误提示',
@@ -37,6 +91,43 @@ Page({
       })
       return;
     }
+    if (e.detail.value.nation == '') {
+      wx.showModal({
+        title: '错误提示',
+        content: '民族不能为空',
+        showCancel: false,
+        success: function (res) {
+          if (res.confirm) {
+          }
+        }
+      })
+      return;
+    }
+    if (e.detail.value.card == '') {
+      wx.showModal({
+        title: '错误提示',
+        content: '身份证不能为空',
+        showCancel: false,
+        success: function (res) {
+          if (res.confirm) {
+          }
+        }
+      })
+      return;
+    }
+    if (e.detail.value.phone == '') {
+      wx.showModal({
+        title: '错误提示',
+        content: '联系电话不能为空',
+        showCancel: false,
+        success: function (res) {
+          if (res.confirm) {
+          }
+        }
+      })
+      return;
+    }
+
     if (e.detail.value.sex != '男' && e.detail.value.sex != '女') {
       wx.showModal({
         title: '错误提示',
@@ -61,14 +152,24 @@ Page({
       })
       return;
     }
+    var sex = 0;
+    if (e.detail.value.sex == '男'){
+      sex = 1;
+    } 
     wx.request({
       url: 'https://www.hattonstar.com/memberUpdate',
       data: {
         name: e.detail.value.name,
-        age: e.detail.value.age,
-        email: e.detail.value.email,
+        age: 10,
+        email: 'xxx@163.com',
         phone: e.detail.value.phone,
-        sex: e.detail.value.sex,
+        sex: sex,
+        school: e.detail.value.school,
+        area: e.detail.value.area,
+        class: e.detail.value.class,
+        grade: e.detail.value.grade,
+        card: e.detail.value.card,
+        nation: e.detail.value.nation,
         wx_id: app.globalData.wx_id
       },
       method: 'POST',
@@ -109,12 +210,22 @@ Page({
       },
       method: 'POST',
       success: function (res) {
+        var sex = '女';
+        if (res.data.sex == 1){
+          sex = '男'
+        }
         page.setData({
           name: res.data.name,
           phone: res.data.phone,
           email: res.data.email,
           age: res.data.age,
-          sex:res.data.sex
+          sex:sex,
+          card: res.data.card,
+          nation: res.data.nation,
+          school: res.data.school,
+          area:res.data.area,
+          class: res.data.class,
+          grade: res.data.grade,
         });
       },
       fail: function (res) {
